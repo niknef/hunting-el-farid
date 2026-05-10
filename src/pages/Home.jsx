@@ -156,10 +156,7 @@ export default function Home() {
     <main className="min-h-screen bg-stone-950 text-white">
       <section
         className="relative flex min-h-screen overflow-hidden bg-cover bg-center"
-        style={{
-          backgroundImage:
-            "url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=2200&q=85')",
-        }}
+        
       >
         <video
           className="absolute inset-0 h-full w-full object-cover"
@@ -167,7 +164,7 @@ export default function Home() {
           muted
           loop
           playsInline
-          poster="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=2200&q=85"
+          
         >
           <source src="/videos/campo-argentino.mp4.mp4" type="video/mp4" />
         </video>
