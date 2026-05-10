@@ -1,7 +1,9 @@
+import Footer from '../components/Footer'
+
 export default function About() {
   return (
-    <main className="min-h-screen bg-stone-950 px-6 py-24 text-stone-50">
-      <section className="mx-auto max-w-4xl">
+    <main className="min-h-screen bg-stone-950 text-stone-50">
+      <section className="mx-auto max-w-4xl px-6 py-24">
         <p className="text-xs font-semibold uppercase tracking-[0.3em] text-[#e5c4a6]">
           Hunting El Farid
         </p>
@@ -11,6 +13,8 @@ export default function About() {
           de Entre Rios y Buenos Aires.
         </p>
       </section>
+
+      <Footer />
     </main>
   )
 }

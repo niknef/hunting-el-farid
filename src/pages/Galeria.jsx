@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import Footer from '../components/Footer'
 
 const navItems = [
   { label: 'Servicios', href: '/#servicios' },
@@ -73,12 +74,12 @@ function Header() {
           ))}
         </div>
 
-        <a
-          href="#contacto"
+        <Link
+          to="/#contacto"
           className="rounded-full border border-[#b97947]/70 bg-[#8f5531] px-5 py-3 text-sm font-semibold text-stone-50 shadow-xl shadow-black/20 transition hover:bg-[#a9693d]"
         >
           Contacto
-        </a>
+        </Link>
       </nav>
     </header>
   )
@@ -122,6 +123,8 @@ export default function Galeria() {
           ))}
         </div>
       </section>
+
+      <Footer />
     </main>
   )
 }

@@ -45,6 +45,30 @@
     }
   }
 
+  @keyframes home-section-rise {
+    from {
+      opacity: 0;
+      transform: translateY(34px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes home-card-rise {
+    from {
+      opacity: 0;
+      transform: translateY(26px) scale(0.985);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+  }
+
   .field-slider-track {
     animation: field-slider 34s linear infinite;
   }
@@ -55,6 +79,22 @@
 
   .gallery-soft-pulse {
     animation: gallery-soft-pulse 6s ease-in-out infinite;
+  }
+
+  @supports (animation-timeline: view()) {
+    @media (prefers-reduced-motion: no-preference) {
+      .home-reveal {
+        animation: home-section-rise both ease-out;
+        animation-range: entry 10% cover 28%;
+        animation-timeline: view();
+      }
+
+      .home-reveal-card {
+        animation: home-card-rise both ease-out;
+        animation-range: entry 8% cover 24%;
+        animation-timeline: view();
+      }
+    }
   }
 
   .gallery-page-grid {
