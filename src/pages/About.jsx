@@ -2,7 +2,7 @@ export default function About() {
   return (
     <main className="min-h-screen bg-stone-950 px-6 py-24 text-stone-50">
       <section className="mx-auto max-w-4xl">
-        <p className="text-xs font-semibold uppercase tracking-[0.3em] text-amber-200">
+        <p className="text-xs font-semibold uppercase tracking-[0.3em] text-[#e5c4a6]">
           Hunting El Farid
         </p>
         <h1 className="mt-4 font-serif text-5xl font-semibold">Nosotros</h1>
