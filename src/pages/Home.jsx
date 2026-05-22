@@ -85,44 +85,41 @@ const species = [
 const galleryMedia = [
   {
     type: 'video',
-    src: '/videos/campo-argentino.mp4.mp4',
-    title: 'Atardecer en el campo',
-    featured: true,
+    src: '/img/actualizadas/video5.mp4',
+    title: 'Asado en el campo',
+    className: 'md:col-span-2 md:row-span-2',
+  },
+  {
+    type: 'video',
+    src: '/img/actualizadas/video2.mp4',
+    title: 'Experiencia El Farid',
+    className: 'md:row-span-2',
   },
   {
     type: 'image',
-    src: '/img/axis.jpg',
-    title: 'Ciervo axis',
+    src: '/img/actualizadas/variado4.jpeg',
+    title: 'Campo argentino',
   },
   {
     type: 'image',
-    src: '/img/chancho.jpg',
-    title: 'Caza de jabali',
+    src: '/img/actualizadas/variado8.jpeg',
+    title: 'Asado argentino',
   },
   {
     type: 'image',
-    src: '/img/bufalo.webp',
-    title: 'Bufalo',
+    src: '/img/actualizadas/variado17.jpeg',
+    title: 'Hermoso Axis',
+    className: 'md:col-span-2',
   },
   {
     type: 'image',
-    src: '/img/liebre.jpg',
-    title: 'Caza menor',
+    src: '/img/actualizadas/variado16.jpeg',
+    title: 'Trofeos de caza',
   },
   {
     type: 'image',
-    src: '/img/antilopenegro.webp',
-    title: 'Antilope negro',
-  },
-  {
-    type: 'image',
-    src: '/img/carnero.jpg',
-    title: 'Carnero salvaje',
-  },
-  {
-    type: 'image',
-    src: '/img/paloma.jpeg',
-    title: 'Paloma',
+    src: '/img/actualizadas/variado19.jpeg',
+    title: 'Gigantes del campo',
   },
 ]
 
@@ -404,16 +401,12 @@ export default function Home() {
             </h2>
           </div>
 
-          <div className="mt-14 grid auto-rows-[220px] gap-4 md:grid-cols-4 lg:auto-rows-[260px]">
-            {galleryMedia.map((item, index) => (
+          <div className="mt-14 grid auto-rows-[220px] gap-4 md:grid-cols-4 md:grid-flow-dense lg:auto-rows-[260px]">
+            {galleryMedia.map((item) => (
               <article
                 key={`${item.src}-${item.title}`}
                 className={`home-reveal-card group relative overflow-hidden border border-white/10 bg-stone-900 ${
-                  item.featured
-                    ? 'md:col-span-2 md:row-span-2'
-                    : index === 5
-                      ? 'md:col-span-2'
-                      : ''
+                  item.className ?? ''
                 }`}
               >
                 {item.type === 'video' ? (

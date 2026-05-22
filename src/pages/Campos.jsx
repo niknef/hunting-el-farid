@@ -8,17 +8,6 @@ const navItems = [
   { label: 'Nosotros', href: '/#nosotros' },
 ]
 
-const sharedGallery = [
-  '/img/axis.jpg',
-  '/img/chancho.jpg',
-  '/img/liebre.jpg',
-  '/img/bufalo.webp',
-  '/img/antilopenegro.webp',
-  '/img/carnero.jpg',
-  '/img/cabrasalvaje.jpeg',
-  '/img/paloma.jpeg',
-]
-
 const fields = [
   {
     eyebrow: 'Campo en Entre Rios',
@@ -26,18 +15,28 @@ const fields = [
     location: 'Entre Rios, Argentina',
     description:
       'Un campo de monte, pastizales y ambiente litoraleño, preparado para jornadas de caza mayor y menor con acompanamiento cercano desde la llegada hasta el cierre de cada salida.',
-    background: '/img/axis.jpg',
+    background: '/img/actualizadas/entre-rios-slider1.jpeg',
     mapQuery: 'Entre Rios Argentina',
-    gallery: sharedGallery,
+    gallery: [
+      '/img/actualizadas/entre-rios-slider1.jpeg',
+      '/img/actualizadas/entre-rios-slider2.jpeg',
+      '/img/actualizadas/entre-rios-slider3.jpeg',
+      '/img/actualizadas/entre-rios-slider4.jpeg',
+      '/img/actualizadas/entre-rios-slider5.jpeg',
+      '/img/actualizadas/entre-rios-slider6.jpeg',
+      '/img/actualizadas/entre-rios-slider7.jpeg',
+      '/img/actualizadas/entre-rios-slider8.jpeg',
+      '/img/actualizadas/entre-rios-slider9.jpeg',
+    ],
     estanciaTitle: 'Estancia Entre Rios',
     estanciaText:
       'Espacios de descanso y reunion para cerrar cada jornada con la calidez de una casa de campo.',
     estanciaImages: [
-      '/img/bufalo.webp',
-      '/img/axis.jpg',
-      '/img/paloma.jpeg',
-      '/img/liebre.jpg',
-      '/img/carnero.jpg',
+      '/img/actualizadas/estancia-entre-rios-1.jpeg',
+      '/img/actualizadas/estancia-entre-rios-2.jpeg',
+      '/img/actualizadas/estancia-entre-rios-3.jpeg',
+      '/img/actualizadas/estancia-entre-rios-4.jpeg',
+      '/img/actualizadas/estancia-entre-rios-6.jpeg',
     ],
   },
   {
@@ -46,27 +45,29 @@ const fields = [
     location: 'Buenos Aires, Argentina',
     description:
       'Un campo amplio y accesible, pensado para combinar caza, descanso y logistica eficiente. Ideal para armar programas a medida segun especie, grupo y objetivo del cazador.',
-    background: '/img/chancho.jpg',
+    background: '/img/actualizadas/bs-as-slider-1.jpeg',
     mapQuery: 'Buenos Aires Argentina',
     gallery: [
-      '/img/liebre.jpg',
-      '/img/Perdiz.jpeg',
-      '/img/paloma.jpeg',
-      '/img/chancho.jpg',
-      '/img/cuatro%20cuernos.jpeg',
-      '/img/bufalo.webp',
-      '/img/axis.jpg',
-      '/img/cabrasalvaje.jpeg',
+      '/img/actualizadas/bs-as-slider-1.jpeg',
+      '/img/actualizadas/bs-as-slider-2.jpeg',
+      '/img/actualizadas/bs-as-slider-3.jpeg',
+      '/img/actualizadas/bs-as-slider-4.jpeg',
+      '/img/actualizadas/bs-as-slider-5.jpeg',
+      '/img/actualizadas/bs-as-slider-6.jpeg',
+      '/img/actualizadas/bs-as-slider-7.jpeg',
+      '/img/actualizadas/bs-as-slider-8.jpeg',
+      '/img/actualizadas/bs-as-slider-9.jpeg',
+      '/img/actualizadas/bs-as-slider-10.jpeg',
     ],
     estanciaTitle: 'Estancia Buenos Aires',
     estanciaText:
       'Un punto de encuentro comodo y funcional para grupos, con lugar para descansar, compartir comidas y preparar cada salida.',
     estanciaImages: [
-      '/img/chancho.jpg',
-      '/img/Perdiz.jpeg',
-      '/img/cuatro%20cuernos.jpeg',
-      '/img/cabrasalvaje.jpeg',
-      '/img/antilopenegro.webp',
+      '/img/actualizadas/estancia-bs-as-1.jpeg',
+      '/img/actualizadas/estancia-bs-as-2.jpeg',
+      '/img/actualizadas/estancia-bs-as-3.jpeg',
+      '/img/actualizadas/estancia-bs-as-4.jpeg',
+      '/img/actualizadas/estancia-bs-as-5.jpeg',
     ],
   },
 ]
@@ -123,7 +124,7 @@ function ImageSlider({ images, title }) {
             key={`${image}-${index}`}
             src={image}
             alt={`${title} ${index + 1}`}
-            className="h-52 w-72 flex-none object-cover sm:h-60 sm:w-96"
+            className="h-72 w-72 flex-none object-cover sm:h-96 sm:w-96"
           />
         ))}
       </div>
@@ -239,8 +240,7 @@ export default function Campos() {
       <section
         className="relative flex min-h-[78vh] items-end overflow-hidden bg-cover bg-center px-5 pb-16 pt-32 sm:px-8 lg:px-10"
         style={{
-          backgroundImage:
-            "url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=2200&q=85')",
+          backgroundImage: "url('/img/actualizadas/variado17.jpeg')",
         }}
       >
         <Header />

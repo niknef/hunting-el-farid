@@ -11,37 +11,93 @@ const navItems = [
 const galleryItems = [
   {
     type: 'video',
-    src: '/videos/campo-argentino.mp4.mp4',
+    src: '/img/actualizadas/video1.mp4',
+    poster: '/img/actualizadas/variado.jpeg',
     className: 'md:col-span-2 md:row-span-2',
   },
-  { type: 'image', src: '/img/axis.jpg' },
-  { type: 'image', src: '/img/chancho.jpg' },
+  { type: 'image', src: '/img/actualizadas/variado.jpeg' },
+  { type: 'image', src: '/img/actualizadas/variado1.jpeg' },
   {
     type: 'video',
-    src: '/videos/campo-argentino.mp4.mp4',
+    src: '/img/actualizadas/video2.mp4',
+    poster: '/img/actualizadas/variado3.jpeg',
     className: 'md:row-span-2',
   },
-  { type: 'image', src: '/img/bufalo.webp' },
-  { type: 'image', src: '/img/liebre.jpg' },
-  { type: 'image', src: '/img/antilopenegro.webp', className: 'md:col-span-2' },
-  { type: 'image', src: '/img/carnero.jpg' },
+  { type: 'image', src: '/img/actualizadas/variado2.jpeg' },
+  { type: 'image', src: '/img/actualizadas/variado3.jpeg' },
   {
-    type: 'video',
-    src: '/videos/campo-argentino.mp4.mp4',
+    type: 'image',
+    src: '/img/actualizadas/variado4.jpeg',
     className: 'md:col-span-2',
   },
-  { type: 'image', src: '/img/cabrasalvaje.jpeg' },
-  { type: 'image', src: '/img/cuatro%20cuernos.jpeg' },
-  { type: 'image', src: '/img/paloma.jpeg' },
-  { type: 'image', src: '/img/Perdiz.jpeg' },
+  { type: 'image', src: '/img/actualizadas/variado5.jpeg' },
   {
     type: 'video',
-    src: '/videos/campo-argentino.mp4.mp4',
+    src: '/img/actualizadas/video3.mp4',
+    poster: '/img/actualizadas/variado8.jpeg',
+    className: 'md:col-span-2',
+  },
+  { type: 'image', src: '/img/actualizadas/variado6.jpeg' },
+  { type: 'image', src: '/img/actualizadas/variado7.jpeg' },
+  { type: 'image', src: '/img/actualizadas/variado8.jpeg' },
+  { type: 'image', src: '/img/actualizadas/variado9.jpeg' },
+  {
+    type: 'video',
+    src: '/img/actualizadas/video4.mp4',
+    poster: '/img/actualizadas/variado12.jpeg',
     className: 'md:col-span-2 md:row-span-2',
   },
-  { type: 'image', src: '/img/axis.jpg' },
-  { type: 'image', src: '/img/liebre.jpg' },
-  { type: 'image', src: '/img/chancho.jpg', className: 'md:col-span-2' },
+  { type: 'image', src: '/img/actualizadas/variado10.jpeg' },
+  { type: 'image', src: '/img/actualizadas/variado11.jpeg' },
+  {
+    type: 'image',
+    src: '/img/actualizadas/variado12.jpeg',
+    className: 'md:col-span-2',
+  },
+  { type: 'image', src: '/img/actualizadas/variado13.jpeg' },
+  { type: 'image', src: '/img/actualizadas/variado14.jpeg' },
+  {
+    type: 'video',
+    src: '/img/actualizadas/video5.mp4',
+    poster: '/img/actualizadas/variado16.jpeg',
+    className: 'md:row-span-2',
+  },
+  { type: 'image', src: '/img/actualizadas/variado15.jpeg' },
+  { type: 'image', src: '/img/actualizadas/variado16.jpeg' },
+  {
+    type: 'image',
+    src: '/img/actualizadas/variado17.jpeg',
+    className: 'md:col-span-2',
+  },
+  { type: 'image', src: '/img/actualizadas/variado18.jpeg' },
+  { type: 'image', src: '/img/actualizadas/variado19.jpeg' },
+  { type: 'image', src: '/img/actualizadas/variado20.jpeg' },
+  {
+    type: 'image',
+    src: '/img/actualizadas/entre-rios-slider1.jpeg',
+    className: 'md:col-span-2',
+  },
+  { type: 'image', src: '/img/actualizadas/bs-as-slider-2.jpeg' },
+  { type: 'image', src: '/img/actualizadas/entre-rios-slider4.jpeg' },
+  {
+    type: 'image',
+    src: '/img/actualizadas/bs-as-slider-5.jpeg',
+    className: 'md:row-span-2',
+  },
+  { type: 'image', src: '/img/actualizadas/entre-rios-slider7.jpeg' },
+  { type: 'image', src: '/img/actualizadas/bs-as-slider-8.jpeg' },
+  {
+    type: 'image',
+    src: '/img/actualizadas/entre-rios-slider9.jpeg',
+    className: 'md:col-span-2',
+  },
+  { type: 'image', src: '/img/actualizadas/bs-as-slider-10.jpeg' },
+  { type: 'image', src: '/img/actualizadas/estancia-entre-rios-3.jpeg' },
+  {
+    type: 'image',
+    src: '/img/actualizadas/estancia-bs-as-4.jpeg',
+    className: 'md:col-span-2',
+  },
 ]
 
 function Header() {
@@ -108,6 +164,8 @@ export default function Galeria() {
                   muted
                   loop
                   playsInline
+                  preload="metadata"
+                  poster={item.poster}
                 >
                   <source src={item.src} type="video/mp4" />
                 </video>
